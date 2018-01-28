@@ -21,7 +21,7 @@ If you have any problems with this extension, open an issue on GitHub.
 
 Developers
 ----------
-Vicky Darji
+Vicky
 [@Vicky127127](https://twitter.com/Vicky127127)
 
 Licence
@@ -30,4 +30,4 @@ Licence
 
 Copyright
 ---------
-(c) 2018 Vicky Darji
+(c) 2018 [VKY](http://vky.co.in/)
