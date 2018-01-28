@@ -4,7 +4,7 @@ This extension will help you to let customer login with email or mobile number a
 
 Description
 -----------
-By default customer login with email and password. But what if you want to let customers login with mobile and password also? In that case this extension will help you to do that. Using this extension customer will be able to login with email or mobile and password. Customer login with email and password will be as it is but we have implemented functionality which will also work for login with mobile and password.
+By default customer login with email and password. But what if you want to let customers login with mobile and password also? In that case this extension will help you to do that. Using this extension customer will be able to login with email or mobile and password. Customer login with email and password will be as it is but I have implemented functionality which will also work for login with mobile and password.
 
 Usage
 -----
