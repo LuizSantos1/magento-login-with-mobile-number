@@ -11,6 +11,7 @@ Usage
 Now customer registration form will have a new field "mobile". So, the customer will have
 to enter their mobile for the registration process and that mobile number can be used to log
 in.
+
 If you wish to disable login with mobile number functionality you can go to System->Configuration->VKY EXTENSIONS->Mobile Number Login There you have the option
 to disable it. 
 
