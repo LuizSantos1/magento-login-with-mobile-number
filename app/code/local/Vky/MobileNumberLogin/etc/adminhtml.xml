@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Vky
+ * @package    Vky_MobileNumberLogin
+ * @author     Vicky <viky.031290@gmail.com>
+ * @copyright  Copyright © VKY All right reserved
+ */
+-->
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<mobilenumberlogin translate="title" module="mobilenumberlogin">
+										<title>Mobile Number Login Section</title>
+										<sort_order>0</sort_order>
+									</mobilenumberlogin>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

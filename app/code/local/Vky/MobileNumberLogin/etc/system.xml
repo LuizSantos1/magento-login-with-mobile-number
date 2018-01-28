@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Vky
+ * @package    Vky_MobileNumberLogin
+ * @author     Vicky <viky.031290@gmail.com>
+ * @copyright  Copyright © VKY All right reserved
+ */
+-->
+<config>
+	<tabs translate="label" module="mobilenumberlogin" >
+        <vky translate="label" module="mobilenumberlogin">
+             <label><![CDATA[<img id="vky_block" src="" alt="" border="0" style="position:absolute;" /><div style="margin-left: 35px;margin-top: 5px;font-size: 14px;margin-bottom: 5px;color: #e37f14;">VKY EXTENSIONS</div><script>
+                var n = SKIN_URL.indexOf("adminhtml");
+                $('vky_block').src = SKIN_URL.substring(0, n) + "adminhtml/default/default/images/vky/cube.gif";
+                </script>]]></label>
+            <sort_order>123</sort_order>
+        </vky>
+    </tabs>
+	  <sections>
+		<mobilenumberlogin  translate="label" module="mobilenumberlogin">                    
+		<label>Mobile Number Login</label>
+		<tab>vky</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>1</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <usermobile translate="label"> 
+					  <label>Mobile Number Login</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>This will enable/disable login with Mobile number functionality.</comment>
+                          </enable>
+					   </fields>
+					   </usermobile>
+					</groups>
+		</mobilenumberlogin>
+	  </sections>
+</config>

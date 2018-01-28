@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Vky
+ * @package    Vky_MobileNumberLogin
+ * @author     Vicky <viky.031290@gmail.com>
+ * @copyright  Copyright © VKY All right reserved
+ */
+-->
+<config>
+	<modules>
+		<Vky_MobileNumberLogin>
+			<version>0.0.1</version>
+		</Vky_MobileNumberLogin>
+	</modules>
+	<frontend>
+		<routers>
+			<mobilenumberlogin>
+				<use>standard</use>
+				<args>
+					<module>Vky_MobileNumberLogin</module>
+					<frontName>mobilenumberlogin</frontName>
+				</args>
+			</mobilenumberlogin>
+		</routers>
+		<layout>
+			<updates>
+				<mobilenumberlogin>
+					<file>mobilenumberlogin.xml</file>
+				</mobilenumberlogin>
+			</updates>
+		</layout>
+	</frontend>
+	<global>
+		<models>
+			<checkout>
+				<rewrite>
+					<type_onepage>Vky_MobileNumberLogin_Model_Checkout_Type_Onepage</type_onepage>
+				</rewrite>
+			</checkout>
+			<mobilenumberlogin>
+				<class>Vky_MobileNumberLogin_Model_MobileNumberLogin</class>
+			</mobilenumberlogin>
+		</models>
+		<rewrite>        
+            <vky_mobilenumberlogin_customer_accountcontroller>
+                <from><![CDATA[#^/customer/account/#]]></from>
+                <to>/mobilenumberlogin/customer_account/</to>
+			</vky_mobilenumberlogin_customer_accountcontroller>
+			<vky_mobilenumberlogin_customer_onepagecontroller>
+                <from><![CDATA[#^/checkout/onepage/#]]></from>
+                <to>/mobilenumberlogin/checkout_onepage/</to>
+			</vky_mobilenumberlogin_customer_onepagecontroller>
+		</rewrite>
+		<helpers>
+			<mobilenumberlogin>
+				<class>Vky_MobileNumberLogin_Helper</class>
+			</mobilenumberlogin>
+		</helpers>
+		<blocks>
+			<mobilenumberlogin>
+				<class>Vky_MobileNumberLogin_Block</class>
+			</mobilenumberlogin>
+		</blocks>
+		<models>
+			<mobilenumberlogin>
+				<class>Vky_MobileNumberLogin_Model</class>
+				<resourceModel>mobilenumberlogin_mysql4</resourceModel>
+			</mobilenumberlogin>
+		</models>
+		<resources>
+			<mobilenumberlogin_setup>
+				<setup>
+					<module>Vky_MobileNumberLogin</module>
+					<class>Mage_Eav_Model_Entity_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</mobilenumberlogin_setup>
+			<mobilenumberlogin_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</mobilenumberlogin_write>
+			<mobilenumberlogin_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</mobilenumberlogin_read> 
+		</resources>
+	</global>
+	<admin>
+		<routers>
+			<mobilenumberlogin>
+				<use>admin</use>
+				<args>
+					<module>Vky_MobileNumberLogin</module>
+					<frontName>admin_mobilenumberlogin</frontName>
+				</args>
+			</mobilenumberlogin>
+			<adminhtml>
+				<args>
+					<modules>
+						<Vky_MobileNumberLogin before="Mage_Adminhtml">Vky_MobileNumberLogin_Adminhtml</Vky_MobileNumberLogin>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<mobilenumberlogin translate="title" module="mobilenumberlogin">
+							<title>UserandMobile</title>
+							<sort_order>1000</sort_order>
+							<children>
+								<mobilenumberloginbackend translate="title">
+									<title>Backend Page Title</title>
+								</mobilenumberloginbackend>
+							</children>
+						</mobilenumberlogin>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+</config>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Vky
+ * @package    Vky_MobileNumberLogin
+ * @author     Vicky <viky.031290@gmail.com>
+ * @copyright  Copyright © VKY All right reserved
+ */
+-->
+<layout version="0.1.0">
+    <default>
+    </default>
+    <customer_account_create>
+        <reference name="customer_form_register">
+            <action method="setTemplate"><template>mobilenumberlogin/register.phtml</template></action>
+        </reference>
+    </customer_account_create>
+	<customer_account_login>
+        <reference name="customer_form_login">
+            <action method="setTemplate" ifconfig="mobilenumberlogin/usermobile/enable"><template>mobilenumberlogin/login.phtml</template></action>
+        </reference>
+    </customer_account_login>
+	<customer_account_edit>
+        <reference name="my.account.wrapper">
+            <block type="customer/form_edit" name="customer_edit" template="mobilenumberlogin/edit.phtml"/>
+        </reference>
+    </customer_account_edit>
+	<checkout_onepage_index>
+        <reference name="checkout.onepage.login">
+            <action method="setTemplate" ifconfig="mobilenumberlogin/usermobile/enable"><template>mobilenumberlogin/checkout/onepage/login.phtml</template></action>
+        </reference>
+		<reference name="checkout.onepage.billing">
+            <action method="setTemplate"><template>mobilenumberlogin/checkout/onepage/billing.phtml</template></action>
+        </reference>
+    </checkout_onepage_index>
+</layout>
