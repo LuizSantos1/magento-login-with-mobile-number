@@ -1,4 +1,4 @@
-Login with Mobile number.
+Magento 1 Login with Mobile number.
 =================
 This extension will help you to let customer login with email or mobile number and password.
 
